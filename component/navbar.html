@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <style>
         :root {
-            --primary: #f97316;       /* Warm Fresh Orange */
+            --primary: #f97316;
+            /* Warm Fresh Orange */
             --primary-hover: #ea580c;
-            --accent-red: #ef4444;    /* Appetizing Tomato Red */
-            --accent-green: #22c55e;  /* Fresh Leaf Green */
-            --bg-light: #fffcf8;      /* Warm Cream Background */
-            --text-dark: #1e293b;     /* Dark Slate */
-            --text-muted: #64748b;    /* Slate Gray */
-            --border-color: #ffedd5;  /* Soft Orange Border */
+            --accent-red: #ef4444;
+            /* Appetizing Tomato Red */
+            --accent-green: #22c55e;
+            /* Fresh Leaf Green */
+            --bg-light: #fffcf8;
+            /* Warm Cream Background */
+            --text-dark: #1e293b;
+            /* Dark Slate */
+            --text-muted: #64748b;
+            /* Slate Gray */
+            --border-color: #ffedd5;
+            /* Soft Orange Border */
             --shadow-sm: 0 2px 8px rgba(249, 115, 22, 0.08);
             --shadow-md: 0 10px 25px -5px rgba(249, 115, 22, 0.15);
             --radius-md: 12px;
@@ -23,7 +31,9 @@
         }
 
         /* Basic CSS Reset */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -36,6 +46,7 @@
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
+
         a {
             text-decoration: none;
             color: inherit;
@@ -72,8 +83,8 @@
         }
 
         .brand-logo {
-            height: 48px;          
-            width: auto;           
+            height: 48px;
+            width: auto;
             object-fit: contain;
             display: block;
         }
@@ -123,11 +134,12 @@
         }
     </style>
 </head>
+
 <body>
     <header class="site-header">
         <div class="navbar-container">
             <a href="#" class="nav-brand">
-            <img src="../resources/Logo/Logo.png" alt="Logo" class="brand-logo">
+                <img src="../resources/Logo/Logo.png" alt="Logo" class="brand-logo">
                 <span class="brand-name">BrandName</span>
             </a>
 
@@ -141,4 +153,5 @@
         </div>
     </header>
 </body>
+
 </html>
