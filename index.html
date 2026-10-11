@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Title</title>
+    <title>Home</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,13 +10,330 @@
     <!-- Bootstrap CSS v5.3.8 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <!-- Shared site styles (load after Bootstrap) -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <header>
 
     </header>
-    <main></main>
+    <main>
+        <section class="container-fluid bg-light">
+            <div class="container">
+                <div class="row align-items-center py-5">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <p class="text-uppercase fw-semibold">
+                            Welcome to our coffee shop
+                        </p>
+                        <h1 class="display-3 fw-bold">
+                            Your Perfect
+                            <br>
+                            Cup of Coffee
+                        </h1>
+                        <p class="lead my-4">
+                            Discover freshly brewed coffee, refreshing
+                            drinks, and delicious flavors made for
+                            every moment of your day.
+                        </p>
+                        <a href="#featured" class="btn btn-primary btn-lg">
+                            Explore Our Drinks
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <img src="resources/Coffee/phin.png" class="img-fluid rounded" alt="Coffee and drinks">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="text-uppercase fw-semibold">
+                        About Our Coffee
+                    </p>
+                    <h2 class="display-6 fw-bold mb-4">
+                        Made for Coffee Lovers
+                    </h2>
+                    <p class="lead">
+                        From rich Vietnamese-style phin coffee
+                        to refreshing teas and creamy freeze drinks,
+                        we offer a variety of flavors for every taste.
+                    </p>
+                    <p>
+                        Whether you need a morning energy boost,
+                        a relaxing afternoon drink, or something
+                        sweet to enjoy with friends, there is always
+                        something waiting for you.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="container py-5">
+
+            <div class="text-center mb-5">
+                <p class="text-uppercase fw-semibold">
+                    Our Favorites
+                </p>
+                <h2 class="display-6 fw-bold">
+                    Featured Drinks
+                </h2>
+                <p class="text-muted">
+                    Discover some of our most popular drinks.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="resources/Coffee/AMERICANO_DA.jpg" class="card-img-top" alt="Americano đá">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                Americano Đá
+                            </h5>
+                            <p class="card-text">
+                                A refreshing combination of espresso
+                                and cold water with a clean,
+                                bold coffee flavor.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                                <span class="fs-5 fw-bold text-primary">$2.50</span>
+                                <button class="btn btn-outline-primary btn-sm add-to-cart-btn"
+                                    data-id="americano-da"
+                                    data-name="Americano Đá"
+                                    data-price="2.50"
+                                    data-image="resources/Coffee/AMERICANO_DA.jpg">
+                                    + Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="resources/Coffee/BAC_SIU_1.jpg" class="card-img-top" alt="Bạc xỉu">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                Bạc Xỉu
+                            </h5>
+                            <p class="card-text">
+                                A smooth and sweet Vietnamese coffee
+                                with a rich milk flavor.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                                <span class="fs-5 fw-bold text-primary">$2.20</span>
+                                <button class="btn btn-outline-primary btn-sm add-to-cart-btn"
+                                    data-id="bac-xiu"
+                                    data-name="Bạc Xỉu"
+                                    data-price="2.20"
+                                    data-image="resources/Coffee/BAC_SIU_1.jpg">
+                                    + Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="resources/Coffee/CAPPU_DA.jpg" class="card-img-top" alt="Cappuccino đá">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                Cappuccino Đá
+                            </h5>
+                            <p class="card-text">
+                                Espresso combined with milk and
+                                a smooth layer of foam for a balanced
+                                coffee experience.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                                <span class="fs-5 fw-bold text-primary">$3.20</span>
+                                <button class="btn btn-outline-primary btn-sm add-to-cart-btn"
+                                    data-id="cappuccino-da"
+                                    data-name="Cappuccino Đá"
+                                    data-price="3.20"
+                                    data-image="resources/Coffee/CAPPU_DA.jpg">
+                                    + Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="resources/Coffee/PHIN_DEN_DA.jpg" class="card-img-top" alt="Phin đen đá">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                Phin Đen Đá
+                            </h5>
+                            <p class="card-text">
+                                Strong Vietnamese phin coffee served
+                                over ice for a bold and refreshing taste.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                                <span class="fs-5 fw-bold text-primary">$1.80</span>
+                                <button class="btn btn-outline-primary btn-sm add-to-cart-btn"
+                                    data-id="phin-den-da"
+                                    data-name="Phin Đen Đá"
+                                    data-price="1.80"
+                                    data-image="resources/Coffee/PHIN_DEN_DA.jpg">
+                                    + Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="resources/Coffee/PHIN_SUA_DA.jpg" class="card-img-top" alt="Phin sữa đá">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                Phin Sữa Đá
+                            </h5>
+                            <p class="card-text">
+                                Traditional Vietnamese phin coffee
+                                blended with sweet condensed milk
+                                and served over ice.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                                <span class="fs-5 fw-bold text-primary">$2.00</span>
+                                <button class="btn btn-outline-primary btn-sm add-to-cart-btn"
+                                    data-id="phin-sua-da"
+                                    data-name="Phin Sữa Đá"
+                                    data-price="2.00"
+                                    data-image="resources/Coffee/PHIN_SUA_DA.jpg">
+                                    + Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="resources/Freeze/CARAMEL_PHIN_FREEZE.jpg" class="card-img-top"
+                            alt="Caramel Phin Freeze">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                Caramel Phin Freeze
+                            </h5>
+                            <p class="card-text">
+                                A creamy blended coffee drink
+                                combining Vietnamese coffee with
+                                a sweet caramel flavor.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto pt-2">
+                                <span class="fs-5 fw-bold text-primary">$3.50</span>
+                                <button class="btn btn-outline-primary btn-sm add-to-cart-btn"
+                                    data-id="caramel-phin-freeze"
+                                    data-name="Caramel Phin Freeze"
+                                    data-price="3.50"
+                                    data-image="resources/Freeze/CARAMEL_PHIN_FREEZE.jpg">
+                                    + Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="container py-5">
+
+            <div class="text-center mb-5">
+                <p class="text-uppercase fw-semibold">
+                    Explore
+                </p>
+                <h2 class="display-6 fw-bold">
+                    Something for Everyone
+                </h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-4">
+                            <h3 class="h4">
+                                Coffee
+                            </h3>
+                            <p>
+                                From traditional Vietnamese phin
+                                coffee to modern espresso drinks.
+                            </p>
+                            <a href="menu.html#coffee" class="btn btn-outline-primary">
+                                Explore Coffee
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-4">
+                            <h3 class="h4">
+                                Freeze
+                            </h3>
+                            <p>
+                                Rich, creamy and refreshing blended
+                                drinks for a sweet escape.
+                            </p>
+                            <a href="menu.html#freeze" class="btn btn-outline-primary">
+                                Explore Freeze
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body p-4">
+                            <h3 class="h4">
+                                Tea
+                            </h3>
+                            <p>
+                                Fresh and refreshing tea drinks
+                                with unique flavors.
+                            </p>
+                            <a href="menu.html#tea" class="btn btn-outline-primary">
+                                Explore Tea
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="container-fluid bg-light py-5">
+
+            <div class="container text-center">
+
+                <h2 class="fw-bold">
+                    Find Your Favorite Drink
+                </h2>
+
+                <p class="lead">
+                    Explore our complete menu and discover
+                    your next favorite beverage.
+                </p>
+
+                <a href="menu.html" class="btn btn-primary btn-lg">
+                    View Full Menu
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
     <footer>
         <!-- place footer here -->
     </footer>
@@ -24,6 +341,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
