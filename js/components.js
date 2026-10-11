@@ -129,9 +129,42 @@
         }
     }
 
+    function initNavigationTransitions() {
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest('a[href]');
+            if (!link) return;
+
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('javascript:') || href.startsWith('tel:') || href.startsWith('mailto:') || href === '#') return;
+
+            // Handle anchor navigation on current page
+            if (href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    history.pushState(null, '', href);
+                }
+                return;
+            }
+
+            // Handle internal page transitions (e.g., index.html, menu.html, about.html)
+            const isInternal = href.endsWith('.html') || href.includes('.html#') || href.startsWith('./') || href.startsWith('../');
+            if (isInternal && !link.target && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+                e.preventDefault();
+                document.body.style.transition = 'opacity 0.15s ease';
+                document.body.style.opacity = '0.7';
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 100);
+            }
+        });
+    }
+
     function init() {
         initNavbar();
         initFooter();
+        initNavigationTransitions();
     }
 
     if (document.readyState === 'loading') {
