@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <style>
+        :root {
+            --primary: #f97316;       /* Warm Fresh Orange */
+            --primary-hover: #ea580c;
+            --accent-red: #ef4444;    /* Appetizing Tomato Red */
+            --accent-green: #22c55e;  /* Fresh Leaf Green */
+            --bg-light: #fffcf8;      /* Warm Cream Background */
+            --text-dark: #1e293b;     /* Dark Slate */
+            --text-muted: #64748b;    /* Slate Gray */
+            --border-color: #ffedd5;  /* Soft Orange Border */
+            --shadow-sm: 0 2px 8px rgba(249, 115, 22, 0.08);
+            --shadow-md: 0 10px 25px -5px rgba(249, 115, 22, 0.15);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+            --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        /* Basic CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        } 
+        .site-footer {
+            background-color: #111827;
+            color: #9ca3af;
+            padding-top: 4rem;
+            border-top: 3px solid var(--primary);
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 2.5rem;
+        }
+
+        .footer-brand .brand-name {
+            color: white;
+        }
+
+        .footer-brand-desc {
+            font-size: 0.9rem;
+            margin: 1rem 0 1.5rem;
+            line-height: 1.6;
+            max-width: 320px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-full);
+            background-color: #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .social-btn svg {
+            fill: white;
+            width: 18px;
+            height: 18px;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 4px;
+        }
+
+        .newsletter-desc {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .newsletter-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: #1f2937;
+            border: 1px solid #374151;
+            border-radius: var(--radius-md);
+            color: white;
+            font-size: 0.875rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .newsletter-input:focus {
+            border-color: var(--primary);
+        }
+
+        .newsletter-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--primary);
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Footer Bottom Bar */
+        .footer-bottom {
+            background-color: #0b0f17;
+            border-top: 1px solid #1f2937;
+            padding: 1.5rem 0;
+        }
+
+        .bottom-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .payment-badge {
+            background-color: #1f2937;
+            color: white;
+            padding: 0.25rem 0.6rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }               
+    </style>
+</head>
+<body>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div>
+                <h4 class="footer-title">Khám Phá</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#menu">Thực đơn chính</a></li>
+                    <li><a href="#">Món khuyến mãi</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Địa chỉ cửa hàng</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Hỗ Trợ</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Trung tâm trợ giúp</a></li>
+                    <li><a href="#">Chính sách giao hàng</a></li>
+                    <li><a href="#">Hình thức thanh toán</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Góp ý dịch vụ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Nhận Ưu Đãi</h4>
+                <p class="newsletter-desc">Đăng ký email để nhận voucher giảm giá 20% cho đơn hàng đầu tiên!</p>
+                <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault();">
+                    <input type="email" class="newsletter-input" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="newsletter-btn">Đăng ký ngay</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <p>© 2026  Food Shop. Tất cả quyền được bảo lưu.</p>
+                <div class="payment-methods">
+                    <span class="payment-badge">VISA</span>
+                    <span class="payment-badge">MasterCard</span>
+                    <span class="payment-badge">Momo</span>
+                    <span class="payment-badge">Tiền mặt</span>
+                </div>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>
