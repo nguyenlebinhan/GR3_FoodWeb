@@ -143,6 +143,13 @@ h1, h2, h3, h4, h5, h6 {
     --bs-btn-border-radius: var(--radius-full);
 }
 
+.btn-sm {
+    --bs-btn-padding-x: 14px;
+    --bs-btn-padding-y: 6px;
+    --bs-btn-font-size: 13px;
+    --bs-btn-border-radius: var(--radius-full);
+}
+
 .btn-primary {
     --bs-btn-color: #ffffff;
     --bs-btn-bg: var(--primary);
