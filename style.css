@@ -572,9 +572,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Price column */
-.menu-page td:last-child {
+.menu-page td:nth-child(5) {
     color: var(--primary);
     font-weight: 700;
+    white-space: nowrap;
+}
+
+.menu-page td:last-child {
     white-space: nowrap;
 }
 

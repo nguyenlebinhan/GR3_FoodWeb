@@ -231,6 +231,42 @@
                 return;
             }
 
+            const floatBtn = e.target.closest('#floating-cart-btn');
+            if (floatBtn) {
+                const offcanvasEl = document.getElementById('cartOffcanvas');
+                if (offcanvasEl) {
+                    if (window.bootstrap && window.bootstrap.Offcanvas) {
+                        const bsOffcanvas = window.bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
+                        bsOffcanvas.show();
+                    } else {
+                        const isShown = offcanvasEl.classList.contains('show');
+                        if (isShown) {
+                            offcanvasEl.classList.remove('show');
+                            offcanvasEl.style.visibility = 'hidden';
+                        } else {
+                            offcanvasEl.classList.add('show');
+                            offcanvasEl.style.visibility = 'visible';
+                        }
+                    }
+                }
+                return;
+            }
+
+            const closeOffcanvasBtn = e.target.closest('[data-bs-dismiss="offcanvas"]');
+            if (closeOffcanvasBtn) {
+                const offcanvasEl = document.getElementById('cartOffcanvas');
+                if (offcanvasEl) {
+                    if (window.bootstrap && window.bootstrap.Offcanvas) {
+                        const bsOffcanvas = window.bootstrap.Offcanvas.getInstance(offcanvasEl);
+                        if (bsOffcanvas) bsOffcanvas.hide();
+                    } else {
+                        offcanvasEl.classList.remove('show');
+                        offcanvasEl.style.visibility = 'hidden';
+                    }
+                }
+                return;
+            }
+
             const qtyBtn = e.target.closest('.qty-btn');
             if (qtyBtn) {
                 const id = qtyBtn.dataset.id;
@@ -260,6 +296,9 @@
                 if (offcanvasEl && window.bootstrap && window.bootstrap.Offcanvas) {
                     const bsOffcanvas = window.bootstrap.Offcanvas.getInstance(offcanvasEl);
                     if (bsOffcanvas) bsOffcanvas.hide();
+                } else if (offcanvasEl) {
+                    offcanvasEl.classList.remove('show');
+                    offcanvasEl.style.visibility = 'hidden';
                 }
             }
         });
