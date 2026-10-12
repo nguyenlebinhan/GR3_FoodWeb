@@ -23,9 +23,7 @@
             <nav class="nav-menu">
                 <a href="${basePath}index.html" class="nav-link ${current === 'home' ? 'active' : ''}">Home</a>
                 <a href="${basePath}menu.html" class="nav-link ${current === 'menu' ? 'active' : ''}">Menu</a>
-                <a href="${basePath}index.html#featured" class="nav-link">Special Offers</a>
                 <a href="${basePath}about.html" class="nav-link ${current === 'about' ? 'active' : ''}">About Us</a>
-                <a href="#footer-contact" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
