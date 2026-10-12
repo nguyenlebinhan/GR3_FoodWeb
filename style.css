@@ -497,8 +497,28 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
-    margin: 0;
+    gap: 10px;
+    margin: 16px auto 0;
+}
+
+.page-nav .nav-link {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.page-nav .nav-link:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .menu-page h2 {
@@ -544,13 +564,21 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     border: none;
     border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    text-align: center;
+}
+
+.menu-page th:nth-child(3) {
+    text-align: left;
+    padding-left: 24px;
 }
 
 .menu-page td {
-    padding: 12px 16px;
+    padding: 14px 16px;
     font-size: 15px;
     border: none;
     border-bottom: 1px solid var(--line-color);
+    vertical-align: middle;
     transition: background-color 0.2s ease;
 }
 
@@ -560,6 +588,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-page tr:hover td {
     background-color: #fffaf5;
+}
+
+.menu-page td:first-child,
+.menu-page td:nth-child(2),
+.menu-page td:nth-child(4),
+.menu-page td:nth-child(5) {
+    text-align: center;
+}
+
+.menu-page td:nth-child(3) {
+    text-align: left;
+    padding-left: 24px;
 }
 
 .menu-page td img {
@@ -578,10 +618,6 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
-.menu-page td:last-child {
-    white-space: nowrap;
-}
-
 /* Category / index columns */
 .menu-page td:first-child,
 .menu-page td:nth-child(4) {
@@ -590,14 +626,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-page a[href="#top"] {
     display: inline-block;
-    margin-top: 8px;
+    margin: 12px auto;
+    padding: 6px 16px;
     font-size: 14px;
     font-weight: 600;
     color: var(--text-muted);
+    border-radius: var(--radius-full);
+    transition: all 0.2s ease;
 }
 
 .menu-page a[href="#top"]:hover {
     color: var(--primary);
+    background-color: var(--primary-soft);
 }
 
 .page-footer {
